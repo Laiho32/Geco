@@ -22,4 +22,9 @@ public class LoginGeneratorTest {
         assertThat(res, is("PDUR"));
     }
 
+    @Test
+    public void generateLoginForNomAndPrenom3emeJRAL2() throws Exception {
+        String res = lg.generateLoginForNomAndPrenom("Ralling", "John");
+        assertThat(res, is("JRAL2"));
+    }
 }
