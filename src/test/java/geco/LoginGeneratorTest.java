@@ -1,5 +1,6 @@
 package geco;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -26,5 +27,11 @@ public class LoginGeneratorTest {
     public void generateLoginForNomAndPrenom3emeJRAL2() throws Exception {
         String res = lg.generateLoginForNomAndPrenom("Ralling", "John");
         assertThat(res, is("JRAL2"));
+    }
+
+    @Test
+    public void loginPDUR2 () {
+        String login = lg.generateLoginForNomAndPrenom("Durand","Maxime");
+        Assert.assertEquals("MDUR",login);
     }
 }
